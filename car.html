@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+</head>
+<body class = "border">
+    <h1> Configure Your GT Super Sportscar </h1>
+<div id = "first">
+    <div id = "one">
+        <form id = "price">
+            <div class = "f" id = "f">
+
+                <h2>CONFIGURATION</h2>
+
+                <input type = "radio" value = "17790" id = "manual"> 
+                GT Manual &nbsp; &nbsp; &nbsp; &nbsp; $17,790.00<br>
+
+                <input type = "radio"  value = "18590" id = "Automatic">
+                GT Automatic &nbsp; &nbsp; &nbsp; &nbsp; $18,590.00<br>
+
+                <input type = "radio" value = "22455" id  = "smanual">
+                GT-S Manual &nbsp; &nbsp; &nbsp; &nbsp; $22,455.00<br>
+
+                <input type = "radio"  value = "23155" id = "sportsshift">
+                GT-S Sportshift &nbsp; &nbsp; &nbsp; &nbsp; $23,155.00<br>
+
+                <button onclick = "fn1()" id = bt1>confirm</button>
+
+
+            </div>
+            <div class = "f" id = "s">
+                <h2>FACTORY OPTIONS</h2>
+                <input type = "radio" value = "1235" id = "combo1"> 
+                Option Combo #1 &nbsp; &nbsp; &nbsp; &nbsp; $1235.00<br>
+                <ul>
+                    <li>Power Windows, Doors, Cruise Control</li>
+                </ul>
+                <input type = "radio" value = "3354" id = "combo2"> 
+                Option Combo #2 &nbsp; &nbsp; &nbsp; &nbsp; $3354.00<br>
+                <ul>
+                    <li>Rear Spoiler and Fog Lambs</li>
+                    <li>Keyless Entry</li>
+                    <li>Power Tilt & Slide Moonroof</li>
+                    <li>Power Windows, Doors, Cruise Control</li>
+                </ul>
+                <input type = "radio" value = "0" id = "nocombo"> 
+                No Combo &nbsp; &nbsp; &nbsp; &nbsp; $0<br>
+                <button onclick = "fn2()" id = bt2>confirm</button>
+            </div>
+            <div class = "f" id = "t">
+                <h2>DEALER OPTIONS</h2>
+                <input type = "checkbox" value = "550" id = "USS"> 
+                Upgraded Stereo System &nbsp; &nbsp; &nbsp; &nbsp; $550.00<br>
+                <input type = "checkbox" value = "399" id = "VIP"> 
+                VIP Security System &nbsp; &nbsp; &nbsp; &nbsp; $399.00<br>
+                <input type = "checkbox" value = "295" id = "ADM"> 
+                Auto-Dimming Mirror &nbsp; &nbsp; &nbsp; &nbsp; $295.00
+                <button onclick = "fn3()" id = bt3>confirm</button>
+            </div>
+        </form>
+        <div class = "f" id = "f">
+            <h2>TOTAL PRICE</h2>
+            <input type = "text" value = "">
+            <input type = "submit" value = "Calculate Total">
+        </div>
+    </div>
+
+    <div class = "m" id = "n">
+        <div class = "carcolour">
+        
+        <h2>CHOOSE A COLOUR</h2>
+        <select id = "A">
+        <fieldset>
+            <form>
+             <option value = "red.jpg" selected = "selected"> Red</option>
+             <option value = "blue.jpg"> Blue</option>
+              <option value = "silver.jpg"> Silver</option>
+              <option value = "white.jpg"> White</option>
+              <option value = "black.jpg"> Black</option>
+            </form>
+        </fieldset>
+        </select>
+        <img id = "pic" src = "red.jpg" alt = "coloured">
+        </div>
+
+
+        <style>
+            h2 {
+				
+				color: white;
+                background: 15px solid transparent;
+				background-color: gray;
+                margin: 2px;
+				font-size: 14px;
+			}
+			
+			
+		
+			.f {
+				border: 2px solid;
+				margin: 10px;
+			}
+			
+			#first{
+				display: flex;
+			}
+			#one {
+				display: flex;
+				flex-direction: column;
+			}
+            textarea{
+				margin: 10px;
+			}
+			input[type = submit] {
+				float: right;
+                margin: 10px;
+            }
+            img{
+                float: right;
+                margin: 10px;
+            }
+
+
+			.m {
+                display: flex;
+            }
+
+			ul {
+				margin: 3px;
+            }
+			
+
+        </style>
+        <script>
+            var a;
+            function fn1() {
+                var manual = document.getElementById(manual);
+                var Automatic = document.getElementById(Automstic);
+                var smanual = document.getElementById(smanual);
+                var sportsshift = document.getElementById(sportsshift);
+
+                if(manual.checked ==true)
+                a == 17791;
+                else if(Automatic.checked ==true )
+                a == 18590;
+                else if(smanual.checked == true)
+                a == 22455;
+                else (sportsshift.checked== true)
+                a == 23155;
+
+                return a;
+
+            }
+
+            var b;
+
+            function fn2() {
+                var combo1 = document.getElementById(combo1);
+                var combo2 = document.getElementById(combo2);
+                var nocombo = document.getElementById(nocombo);
+                
+
+                if(combo1.checked ==true)
+                b == 1235;
+                else if(combo2.checked ==true )
+                b == 3354;
+                else (nocombo.checked == true)
+                b == 0;
+                
+                return b;
+            }
+            var c;
+            function fn1() {
+                var USS = document.getElementById(USS);
+                var VIP = document.getElementById(VIP);
+                var ADM = document.getElementById(ADM);
+
+                if(USS.checked ==true && VIP.checked== true && ADM.checked == true )
+                c == 1244;
+                else if(USS.checked ==true && VIP.checked == true && ADM.checked == false)
+                c == 949;
+                else if(USS.checked == true && VIP.checked == false && ADM.checked ==true)
+                c == 845;
+                else if(USS.checked == true && VIP.checked == false && ADM.checked == false)
+                c == 550;
+                else if(USS.checked == false && VIP.checked == true && ADM.checked == false)
+                c == 399;
+                else (USS.checked == false && VIP.checked == false && ADM.checked == true)
+                c == 295;
+
+                return c;
+
+
+            }
+            var result = Number(fn1()) + Number(fn2()) + Number(fn3());
+
+            document.getElementById("submit").innerHTML = result;
+            
+            function photo() {
+				document.getElementById("pic").src = document.getElementById("A").value;
+			}
+			document.getElementById("A").addEventListener("change", photo , false);
+        </script>

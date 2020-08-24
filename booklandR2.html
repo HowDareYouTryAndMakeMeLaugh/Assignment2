@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+</head>
+
+<body>
+    <h1>BOOKLAND</h1>
+<form>
+    <div id = "auth">
+    Author Name: &nbsp; &nbsp; &nbsp; &nbsp; 
+        <input class = "namea" type ="text" id = "aname"><br>
+    </div>
+    <div id = "book">
+    Book Name: &nbsp; &nbsp; &nbsp; &nbsp;
+        <input type ="text" id = "bname"><br>
+    </div>
+    
+    <div id = "btn">
+        <button id = "one" type = "button">Find book</button>
+        <button id = "two" type = "button">Clear info</button>
+    </div>
+    <br>
+    <br>
+    <textarea class="des" id = "desc" rows = "20" cols = "50"></textarea>
+</form>
+
+
+<style>
+    body{
+        background-color: rgba(140, 216, 235, 0.829);
+    }
+
+    form {
+		display: flex;
+        flex-direction: column;
+		align-items: center;
+		border: 2px solid transparent;
+        border-color: black;
+		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        overflow: hidden;
+        margin: 150px;
+				
+	}
+    h1 {
+		text-align: center;
+		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+		font-size: 80px;
+	}
+
+    .des{
+        margin-bottom: 20px;
+    }
+    .namea{
+        margin-top: 20px;
+    }
+    textarea {
+
+	    background-color:rgba(175, 227, 240, 0.829);
+	    color: #000000;
+	    margin: 15px;
+	    border-radius: 10px;
+			}
+    input{
+        background-color:rgba(175, 223, 235, 0.829);
+	    color: #000000;
+	    margin: 15px;
+	    border-radius: 10px;
+    }
+    
+
+
+
+</style>
+
+<script>
+    var bookvar = [one,two,three,four,five];
+    var one = ["E. M. Forster", "e m forster", "A room with a view" , "a room with a view", "This work displays an unusually perceptive view of British society in the early 20th century.It is a social comedy set in Florence, Italy, and Surrey, England. Its heroine, Lucy Honeychurch, struggling against straitlaced Victorian attitudes of arrogance, narroe mindedness and sobbery, falls in love - while on holiday in Italy - with the socially unsuitable George Emerson."];
+    var two = ["James Joyce", "james joyce", "A portrait of the artist as a young man", "a potrait of the artist as a young man", "This book is a fictional re-creation of the Irish writer's own life and early environment. The experiences of the novel's young hero, unfold in astonishingly vivid scenes that seem freshly recalled from life and provide a powerful portrait of the coming of age of a young man of unusual intelligence, sensitivity and character."];
+    var three = ["Isabel Allende", "isabel allende", "The house of spirits", "Allende describes the life of three generations of a prominent family in Chile and skillfully combines with this all the main historical events of the time, up until Pinochet's dictatorship."];
+    var four = ["Isabel Allende", "Of love and shadows", "The whole world of Irene Beltran, a young reporter in Chile at the time of the dictatorship, is destroyed when she discovers a series of killings carried out by government soldiers. With the help of a photographer, Francisco Leal, and risking her life, she tries to come up with evidence against the dictatorship"];
+    var five = ["Thomas Mann", "Death in Venice,", "One of the most famous literary works of the twentiethc entury, this novella embodies themes that preoccupied Thomas Mann in much of his work: the duality of art and life, the presence of death and disintegration in the midst of existence, the connection between love and suffering and the conflict between the artist and his inner self."];
+    var w = false;
+
+
+    function search() {
+        if (w) {
+            var va				
+    }
+    
+
+
+
+     
+
+    function clearbutton() {
+		document.getElementById("aname").value = "";
+		document.getElementById("bname").value = "";
+		document.getElementById("desc").value = "";
+			}
+
+    document.getElementById("one").addEventListener("click", search);
+	document.getElementById ("two").addEventListener("click", clearbutton);
+
+
+
+</script>
+</body>
+</html>
